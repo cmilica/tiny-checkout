@@ -5,8 +5,8 @@ Keep changes small enough to review from the Git diff.
 ## Workflow
 
 1. Start from a clean `main` branch.
-2. Create or switch to the unique workshop branch assigned on the course page,
-   such as `workshop/alex-issue-1`.
+2. Create your own branch from `main`:
+   `workshop/<your-github-handle>-issue-1`.
 3. Reproduce the issue before editing.
 4. Add a regression test that fails for the reported behavior.
 5. Make the smallest change that satisfies the issue.

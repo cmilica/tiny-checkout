@@ -4,10 +4,10 @@
 integer cents, so the example does not depend on floating-point currency
 rounding.
 
-This is the Tiny Checkout repository for the Week 4 guided lab. Clone it from
-the URL on the course page. Run Claude from this repository root. Claude
-edits `checkout.py` and `tests/test_checkout.py` here, and the draft pull
-request is opened here.
+This is the Tiny Checkout repository for the Week 4 guided lab:
+`https://github.com/cmilica/tiny-checkout`. Run Claude from this repository
+root. Claude edits `checkout.py` and `tests/test_checkout.py` here, and the
+draft pull request is opened here.
 
 Keep the course's `guided_lab/README.md` open in another window. It contains
 the step-by-step exercise. Your task is **GitHub issue #1** in this

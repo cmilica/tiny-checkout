@@ -1,0 +1,35 @@
+{
+  "autoMemoryEnabled": false,
+  "permissions": {
+    "defaultMode": "default",
+    "disableAutoMode": "disable",
+    "disableBypassPermissionsMode": "disable",
+    "allow": [
+      "Bash(python3 -m unittest discover -s tests -v)",
+      "Bash(gh issue view *)",
+      "Bash(git diff *)",
+      "Bash(git status --short)"
+    ],
+    "ask": [
+      "Edit",
+      "Write",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(gh pr create *)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Bash(rm -rf *)",
+      "Bash(sudo *)",
+      "Bash(git push -f *)",
+      "Bash(git push --force *)",
+      "Bash(git push --force-with-lease *)",
+      "Bash(git reset --hard *)",
+      "Bash(chmod 777 *)",
+      "Bash(dd *)",
+      "Bash(mkfs *)"
+    ]
+  }
+}

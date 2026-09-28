@@ -25,6 +25,16 @@ class CalculateCheckoutTests(unittest.TestCase):
         self.assertEqual(result.discount_cents, 500)
         self.assertEqual(result.total_cents, 1_500)
 
+    def test_fixed_discount_capped_at_subtotal(self) -> None:
+        result = calculate_checkout(2_000, "VIP50")
+
+        self.assertEqual(result.discount_cents, 2_000)
+        self.assertEqual(result.total_cents, 0)
+        self.assertEqual(
+            result.subtotal_cents,
+            result.discount_cents + result.total_cents,
+        )
+
     def test_code_is_normalized(self) -> None:
         result = calculate_checkout(2_000, " save10 ")
 

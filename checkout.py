@@ -41,6 +41,8 @@ def calculate_checkout(
     else:
         discount_cents = FIXED_DISCOUNTS.get(code, 0)
 
+    discount_cents = min(discount_cents, subtotal_cents)
+
     return CheckoutResult(
         subtotal_cents=subtotal_cents,
         discount_cents=discount_cents,

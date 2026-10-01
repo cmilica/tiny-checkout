@@ -39,7 +39,7 @@ def calculate_checkout(
     if code in PERCENT_DISCOUNTS:
         discount_cents = subtotal_cents * PERCENT_DISCOUNTS[code] // 100
     else:
-        discount_cents = FIXED_DISCOUNTS.get(code, 0)
+        discount_cents = min(FIXED_DISCOUNTS.get(code, 0), subtotal_cents)
 
     return CheckoutResult(
         subtotal_cents=subtotal_cents,
